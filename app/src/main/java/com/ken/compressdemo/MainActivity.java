@@ -1,6 +1,7 @@
 package com.ken.compressdemo;
 
 import android.Manifest;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -13,6 +14,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.ken.library.bean.Photo;
+import com.ken.library.config.ComPressConfig;
 import com.ken.library.utils.CachePathUtils;
 import com.ken.library.utils.CommonUtils;
 import com.ken.library.utils.Constants;
@@ -30,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
 
     private String test_path = "/storage/emulated/0/MagazineUnlock/MagazinePic-05-2.3.001-bigpicture_05_4.jpg";
     private String cameraCachePath;//拍照的源文件路径
+    private ComPressConfig comPressConfig;
+    private ProgressDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 requestPermissions(params, 200);
             }
         }
+        comPressConfig = ComPressConfig.getDefaultComPressConfig();
         testLuban();
     }
 
