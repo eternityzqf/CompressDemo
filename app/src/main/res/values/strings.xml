@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CompressDemo</string>
+    <string name="camera_str">照相</string>
+    <string name="album_str">相册</string>
+</resources>
