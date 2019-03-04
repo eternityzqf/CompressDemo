@@ -13,10 +13,11 @@ import java.util.ArrayList;
  */
 public class ComPressImageManager implements CompressImage {
 
-    private CompressImageUtil compressImageUtil;
-    private ArrayList<Photo> images;
-    private CompressImage.CompressListener listener;
-    private ComPressConfig config;
+    private CompressImageUtil compressImageUtil;//压缩工具类
+    private ArrayList<Photo> images;//要压缩的图片集合
+    private CompressImage.CompressListener listener;//压缩监听
+    private ComPressConfig config;//压缩配置
+
 
     @Override
     public void compress() {
